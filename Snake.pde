@@ -1,4 +1,4 @@
-import ddf.minim.analysis.*;
+import ddf.minim.analysis.*;    // Imported the minim library so I could play music in the bakgroud for the duartion of the game
 import ddf.minim.*;
 PImage scene;
 
@@ -10,13 +10,17 @@ food point;
 
 void setup(){
   size(500, 500,P2D);
-  frameRate(10);                // how fast the snake will move
-  game = new snake();           // declaring the class snake
-  point = new food();           // declaring the class food
-  scene = loadImage("Abstract.jpg"); 
+  
+  // How fast the snake in the game will move
+  frameRate(10);  
+  
+  // Deaclearing the different classes used in my code
+  game = new snake();           
+  point = new food();                                
+  scene = loadImage("Abstract.jpg");   // Imported a background image to  use in the game
   
   minim = new Minim(this);
-  Prologue = minim.loadFile("Prologue.mp3", 1024);
+  Prologue = minim.loadFile("Prologue.mp3", 1024);   // Imported a mp3 filed used as the backround music
   
   //loop the file indefinitely
   Prologue.loop(); 
@@ -30,7 +34,7 @@ void draw(){
   game.display();
   point.display();
   
-  //made by another programmer
+  
   if( dist(point.xpos, point.ypos, game.xpos.get(0), game.ypos.get(0)) < game.sidelen ){
     point.reset();
     game.addLink();
