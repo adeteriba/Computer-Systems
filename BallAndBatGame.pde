@@ -1,7 +1,7 @@
 /*
 I recreated the ball and bat game within processing.
 The aim of the game is to stop the ball hitting the wall behind the paddle.
-The player has three lives. Once all three lives are used up th game ends.
+The player has three lives. Once all three lives are used up the game ends.
 
 */
 
