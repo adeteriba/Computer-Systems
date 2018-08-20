@@ -1,3 +1,10 @@
+/*
+I recreated the ball and bat game within processing.
+The aim of the game is to stop the ball hitting the wall behind the paddle.
+The player has three lives. Once all three lives are used up th game ends.
+
+*/
+
 int y=250;           // Vertical position of ball 
 int direction_y=2;   // Change in vertical position each time draw() executed
 int x=150;           // Vertical position of ball
